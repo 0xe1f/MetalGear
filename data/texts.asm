@@ -169,6 +169,16 @@ idxTexts:           dw txtRelieve
 ; Texts
 ;
 ;----------------------------------------------------------------------------
+
+; Actual text starts after first code
+
+; 0:         Space
+; XXh:       ASCII code
+; 0A1h-0FCh: See corresponding dictionary entry
+; 0FDh:      End of page (transceiver)
+; 0FEh:      Linefeed
+; 0FFh:      End of text
+
 txtRelieve:         db    0, 52h, 45h, 4Ch, 49h, 45h, 56h, 45h,0FFh
 txtOpIntrude:       db  13h,0D1h,   0,0A1h,0A2h,0FEh, 4Fh, 50h, 45h, 52h, 41h, 54h, 49h, 4Fh, 4Eh,   0
                     db 0A3h,   0, 4Eh, 33h, 31h, 33h, 5Ch,0FDh, 50h, 45h, 4Eh, 45h, 54h, 52h, 41h, 54h
@@ -668,95 +678,95 @@ idxDictionary:	    dw dicBigBoss
 ; Dictionary entries
 ;
 ;----------------------------------------------------------------------------
-dicBigBoss:	    db	"BIG",   0, "BOSS",0FFh
-dicPoints:	    db	#5c, #5c, #5c,0FFh
-dicIntruder:	    db	"INTRUDE",0FFh
-dicOutHeav:	    db	"OUTER",   0, "HEAVEN",0FFh
-dicDestroy:	    db	"DESTOROY",0FFh
-dicUltimWeap:	    db	"THE",   0, "ULTIMATE",   0, "WEAPON",0FFh
-dicMetalGear:	    db	"METAL",   0, "GEAR",0FFh
-dicContact:	    db	"CONTACT",0FFh
-dicGreyFox:	    db	"GREY",   0, "FOX",0FFh
-dicSearchFor:	    db	"SEARCH",   0, "FOR",0FFh
-dicFrom:	    db	"FROM",0FFh
-dicNow:		    db	"NOW",0FFh
-dicOver:	    db	"OVER",0FFh
-dicMove:	    db	"MOVE",0FFh
-dicYou:		    db	"YOU",0FFh
-dicCapture:	    db	"CAPTURE",0FFh
-dicResistance:	    db	"RESISTANCE",0FFh
-dicMrSchneider:	    db	"MR",#5C,"SCHNEIDER",0FFh
-dicWaveBand:	    db	"WAVEBAND",0FFh
-dicPutOn:	    db	"PUT",   0, "ON",0FFh
-dicLeader:	    db	"LEADER",0FFh
-dicRescued:	    db	"RESCUED",0FFh
-dicFoxHound:	    db	"FOX",   0, "HOUND",0FFh
-dicEnemy:	    db	"ENEMY",0FFh
-dicKeyFor:	    db	"KEY",   0, "FOR",0FFh
-dicSelecting:	    db	"SELECTING",0FFh
-dicCheck:	    db	"CHECK",0FFh
-dicHave:	    db	"HAVE",0FFh
-dicConfined:	    db	"CONFINED",0FFh
-dicSecret:	    db	"SECRET",0FFh
-dicSolitary:	    db	"SOLITARY",0FFh
-dicCell:	    db	"CELL",0FFh
-dicWill:	    db	"WILL",0FFh
-dicMust:	    db	"MUST",0FFh
-dicOnly:	    db	"ONLY",0FFh
-dicDrPettrovic:	    db	"DR",#5C,"PETTROVICH",0FFh
-dicBuilding:	    db	"BUILDING",0FFh
-dicBasement:	    db	"BASEMENT",0FFh
-dicFloor:	    db	"FLOOR",0FFh
-dicJennifer:	    db	"JENNIFER",0FFh
-dicEllen:	    db	"ELLEN",0FFh
-dicRocketLaunch:    db	"ROCKET",   0, "LAUNCHER",0FFh
-dicSolidSnake:	    db	"SOLID",   0, "SNAKE",0FFh
-dicEmergency:	    db	"EMERGENCY",0FFh
-dicDestruction:	    db	"DESTRUCTION",0FFh
-dicThe:		    db	"THE",0FFh
-dicCourtyard:	    db	"COURTYARD",0FFh
-dicComplete:	    db	"COMPLETE",0FFh
-dicThisIs:	    db	"THIS",   0, "IS",0FFh
-dicWeapon:	    db	"WEAPON",0FFh
-dicEquipment:	    db	"EQUIPMENTS",0FFh
-dicCard:	    db	"CARD",0FFh
-dicPlease:	    db	"PLEASE",0FFh
-dicBand:	    db	"BAND",0FFh
-dicDiane:	    db	"DIANE",0FFh
-dicGain:	    db	"GAIN",0FFh
-dicWith:	    db	"WITH",0FFh
-dicAnd:		    db	"AND",0FFh
-dicDoor:	    db	"DOOR",0FFh
-dicHello:	    db	"HELLO=",0FFh
-dicBye:		    db	"BYE",0FFh
-dicMachGunKid:	    db	"MACHINE",   0, "GUN",   0, "KID",0FFh
-dicRemoteCtrl:	    db	"REMOTE@CONTROL",0FFh
-dicMissile:	    db	"MISSILE",0FFh
-dicCan:		    db	"CAN",0FFh
-dicOn:		    db	"ON",0FFh
-dicBe:		    db	"BE",0FFh
-dicAvailable:	    db	"AVAILABLE",0FFh
-dicNot:		    db	"NOT",0FFh
-dicTo:		    db	"TO",0FFh
-dicShould:	    db	"SHOULD",0FFh
-dicWall:	    db	"WALL",0FFh
-dicDefeat:	    db	"DEFEAT",0FFh
-dicNever:	    db	"NEVER",0FFh
-dicBy:		    db	"BY",0FFh
-dicThere:	    db	"THERE",0FFh
-dicOpen:	    db	"OPEN",0FFh
-dicTake:	    db	"TAKE",0FFh
-dicLorry:	    db	"LORRY",0FFh
-dicGas:		    db	"GAS",0FFh
-dicAccess:	    db	"ACCESS",0FFh
-dicFor:		    db	"FOR",0FFh
-dicBombBlastS:	    db	"BOMB",   0, "BLAST",   0, "SUIT",0FFh
-dicHere:	    db	"HERE",0FFh
-dicLead:	    db	"LEAD",0FFh
-dicRoom:	    db	"ROOM",0FFh
-dicWay:		    db	"WAY",0FFh
-dicMrArnold:	    db	"MR",#5C,"ARNOLD",0FFh
-dicKill:	    db	"KILL",0FFh
-dicFortress:	    db	"FORTRESS",0FFh
-dicBreak:	    db	"BREAK",0FFh
-dicTransceiver:	    db	"TRANSCEIVER",0FFh
+dicBigBoss:	    db	"BIG",   0, "BOSS",0FFh				; 0A1h
+dicPoints:	    db	#5c, #5c, #5c,0FFh				; 0A2h
+dicIntruder:	    db	"INTRUDE",0FFh					; 0A3h
+dicOutHeav:	    db	"OUTER",   0, "HEAVEN",0FFh			; 0A4h
+dicDestroy:	    db	"DESTOROY",0FFh					; 0A5h
+dicUltimWeap:	    db	"THE",   0, "ULTIMATE",   0, "WEAPON",0FFh	; 0A6h
+dicMetalGear:	    db	"METAL",   0, "GEAR",0FFh			; 0A7h
+dicContact:	    db	"CONTACT",0FFh					; 0A8h
+dicGreyFox:	    db	"GREY",   0, "FOX",0FFh				; 0A9h
+dicSearchFor:	    db	"SEARCH",   0, "FOR",0FFh			; 0AAh
+dicFrom:	    db	"FROM",0FFh					; 0ABh
+dicNow:		    db	"NOW",0FFh					; 0ACh
+dicOver:	    db	"OVER",0FFh					; 0ADh
+dicMove:	    db	"MOVE",0FFh					; 0AEh
+dicYou:		    db	"YOU",0FFh					; 0AFh
+dicCapture:	    db	"CAPTURE",0FFh					; 0B0h
+dicResistance:	    db	"RESISTANCE",0FFh				; 0B1h
+dicMrSchneider:	    db	"MR",#5C,"SCHNEIDER",0FFh			; 0B2h
+dicWaveBand:	    db	"WAVEBAND",0FFh					; 0B3h
+dicPutOn:	    db	"PUT",   0, "ON",0FFh				; 0B4h
+dicLeader:	    db	"LEADER",0FFh					; 0B5h
+dicRescued:	    db	"RESCUED",0FFh					; 0B6h
+dicFoxHound:	    db	"FOX",   0, "HOUND",0FFh			; 0B7h
+dicEnemy:	    db	"ENEMY",0FFh					; 0B8h
+dicKeyFor:	    db	"KEY",   0, "FOR",0FFh				; 0B9h
+dicSelecting:	    db	"SELECTING",0FFh				; 0BAh
+dicCheck:	    db	"CHECK",0FFh					; 0BBh
+dicHave:	    db	"HAVE",0FFh					; 0BCh
+dicConfined:	    db	"CONFINED",0FFh					; 0BDh
+dicSecret:	    db	"SECRET",0FFh					; 0BEh
+dicSolitary:	    db	"SOLITARY",0FFh					; 0BFh
+dicCell:	    db	"CELL",0FFh					; 0C0h
+dicWill:	    db	"WILL",0FFh					; 0C1h
+dicMust:	    db	"MUST",0FFh					; 0C2h
+dicOnly:	    db	"ONLY",0FFh					; 0C3h
+dicDrPettrovic:	    db	"DR",#5C,"PETTROVICH",0FFh			; 0C4h
+dicBuilding:	    db	"BUILDING",0FFh					; 0C5h
+dicBasement:	    db	"BASEMENT",0FFh					; 0C6h
+dicFloor:	    db	"FLOOR",0FFh					; 0C7h
+dicJennifer:	    db	"JENNIFER",0FFh					; 0C8h
+dicEllen:	    db	"ELLEN",0FFh					; 0C9h
+dicRocketLaunch:    db	"ROCKET",   0, "LAUNCHER",0FFh			; 0CAh
+dicSolidSnake:	    db	"SOLID",   0, "SNAKE",0FFh			; 0CBh
+dicEmergency:	    db	"EMERGENCY",0FFh				; 0CCh
+dicDestruction:	    db	"DESTRUCTION",0FFh				; 0CDh
+dicThe:		    db	"THE",0FFh					; 0CEh
+dicCourtyard:	    db	"COURTYARD",0FFh				; 0CFh
+dicComplete:	    db	"COMPLETE",0FFh					; 0D0h
+dicThisIs:	    db	"THIS",   0, "IS",0FFh				; 0D1h
+dicWeapon:	    db	"WEAPON",0FFh					; 0D2h
+dicEquipment:	    db	"EQUIPMENTS",0FFh				; 0D3h
+dicCard:	    db	"CARD",0FFh					; 0D4h
+dicPlease:	    db	"PLEASE",0FFh					; 0D5h
+dicBand:	    db	"BAND",0FFh					; 0D6h
+dicDiane:	    db	"DIANE",0FFh					; 0D7h
+dicGain:	    db	"GAIN",0FFh					; 0D8h
+dicWith:	    db	"WITH",0FFh					; 0D9h
+dicAnd:		    db	"AND",0FFh					; 0DAh
+dicDoor:	    db	"DOOR",0FFh					; 0DBh
+dicHello:	    db	"HELLO=",0FFh					; 0DCh
+dicBye:		    db	"BYE",0FFh					; 0DDh
+dicMachGunKid:	    db	"MACHINE",   0, "GUN",   0, "KID",0FFh		; 0DEh
+dicRemoteCtrl:	    db	"REMOTE@CONTROL",0FFh				; 0DFh
+dicMissile:	    db	"MISSILE",0FFh					; 0E0h
+dicCan:		    db	"CAN",0FFh					; 0E1h
+dicOn:		    db	"ON",0FFh					; 0E2h
+dicBe:		    db	"BE",0FFh					; 0E3h
+dicAvailable:	    db	"AVAILABLE",0FFh				; 0E4h
+dicNot:		    db	"NOT",0FFh					; 0E5h
+dicTo:		    db	"TO",0FFh					; 0E6h
+dicShould:	    db	"SHOULD",0FFh					; 0E7h
+dicWall:	    db	"WALL",0FFh					; 0E8h
+dicDefeat:	    db	"DEFEAT",0FFh					; 0E9h
+dicNever:	    db	"NEVER",0FFh					; 0EAh
+dicBy:		    db	"BY",0FFh					; 0EBh
+dicThere:	    db	"THERE",0FFh					; 0ECh
+dicOpen:	    db	"OPEN",0FFh					; 0EDh
+dicTake:	    db	"TAKE",0FFh					; 0EEh
+dicLorry:	    db	"LORRY",0FFh					; 0EFh
+dicGas:		    db	"GAS",0FFh					; 0F0h
+dicAccess:	    db	"ACCESS",0FFh					; 0F1h
+dicFor:		    db	"FOR",0FFh					; 0F2h
+dicBombBlastS:	    db	"BOMB",   0, "BLAST",   0, "SUIT",0FFh		; 0F3h
+dicHere:	    db	"HERE",0FFh					; 0F4h
+dicLead:	    db	"LEAD",0FFh					; 0F5h
+dicRoom:	    db	"ROOM",0FFh					; 0F6h
+dicWay:		    db	"WAY",0FFh					; 0F7h
+dicMrArnold:	    db	"MR",#5C,"ARNOLD",0FFh				; 0F8h
+dicKill:	    db	"KILL",0FFh					; 0F9h
+dicFortress:	    db	"FORTRESS",0FFh					; 0FAh
+dicBreak:	    db	"BREAK",0FFh					; 0FBh
+dicTransceiver:	    db	"TRANSCEIVER",0FFh				; 0FCh
